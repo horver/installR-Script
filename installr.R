@@ -1,4 +1,4 @@
-library('yaml')
+library("yaml")
 
 InstallLibs <- function(libs, load = TRUE) {
   sapply(libs, 
@@ -20,7 +20,7 @@ InstallLibsScript <- function(files, load = TRUE) {
 }
 
 
-InstallLibsYAML <- function(file = 'deps.yaml') {
+InstallLibsYML <- function(file = "deps.yml") {
   libs <- yaml.load_file(file)
   InstallLibs(libs$deps, libs$load)
 }
